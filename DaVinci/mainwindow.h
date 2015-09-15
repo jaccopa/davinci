@@ -6,6 +6,9 @@
 #include <QApplication>
 #include <QTextCodec>
 #include <QGroupBox>
+#include <QLabel>
+#include <QPushButton>
+#include <QVBoxLayout>
 
 class MainWindow : public QMainWindow
 {
@@ -18,12 +21,16 @@ public:
     void initUI();
     void setWidth(int);
     void setHeight(int);
-    int getWidth();
-    int getHeight();
+    QLabel *createName();
+    QGroupBox *createCure();
+    QGroupBox *createSetting();
+    int  getWidth();
+    int  getHeight();
 
 private:
     QGroupBox *gCure;
     QGroupBox *gSettings;
+    QLabel    *lName;
     int screenW;
     int screenH;
 };
